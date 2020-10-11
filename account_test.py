@@ -5,7 +5,7 @@ from account import Account
 class TestAccount(unittest.TestCase):
     def setUp(self):
        
-        self.new_account = Account("Ahmed","Mukhtar","abc234","mukhtarabdirahman@gmail.com") # create Account object
+        self.new_account = Account("Dorcas","Wanjiku","sh3k1l33","smallwanjiku@gmail.com") 
 
     
     def test_init(self):

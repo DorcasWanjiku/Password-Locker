@@ -58,7 +58,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0741421079","test@user.com") # new account
+        test_account = Account("Test","user","0714152325","test@user.com") 
         test_account.save_account()
 
         found_account = Account.find_by_name("Test")
@@ -70,7 +70,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0741421079","test@user.com") # new account
+        test_account = Account("Test","user","0714152325","test@user.com") 
         test_account.save_account()
 
         account_exists = Account.account_exist("0741421079")

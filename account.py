@@ -34,3 +34,22 @@ class Account:
     
 
     @classmethod
+    def account_exist(cls,name):
+        '''
+        Method that checks if a account exists from the account list.
+        Args:
+            name: Acc name to search if it exists
+        Returns :
+            Boolean: True or false depending if the account exists
+        '''
+        for account in cls.account_list:
+            if account.password == name:
+                    return account
+
+        return False
+    @classmethod
+    def display_accounts(cls):
+        '''
+        method that returns the account list
+        '''
+        return cls.account_list    

@@ -52,7 +52,7 @@ class Credential:
 
 
     @classmethod
-    def display_credentials(cls):  
+    def display_credentials(cls): 
         '''
         method that returns the credentials list
         '''

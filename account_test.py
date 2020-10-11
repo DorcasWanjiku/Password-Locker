@@ -16,7 +16,8 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(self.new_account.user_name,"Wanjiku")
         self.assertEqual(self.new_account.password,"sh3k1l33")
         self.assertEqual(self.new_account.email,"smallwanjiku@gmail.com")
-        def test_save_account(self):
+
+    def test_save_account(self):
         '''
         test_save_account test case to test if the account object is saved into
          the account list
@@ -38,15 +39,16 @@ class TestAccount(unittest.TestCase):
             objects to our account_list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","0714152325","test@user.com") 
+            test_account = Account("Test","user","46578907890","test@user.com") 
             test_account.save_account()
             self.assertEqual(len(Account.account_list),2)
-             def test_delete_account(self):
+
+    def test_delete_account(self):
             '''
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","0714152325","test@user.com") 
+            test_account = Account("Test","user","0712345678","test@user.com") 
             test_account.save_account()
 
             self.new_account.delete_account()
@@ -58,7 +60,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0714152325","test@user.com") 
+        test_account = Account("Test","user","0741421079","test@user.com") 
         test_account.save_account()
 
         found_account = Account.find_by_name("Test")
@@ -70,7 +72,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0714152325","test@user.com") 
+        test_account = Account("Test","user","0741421079","test@user.com") 
         test_account.save_account()
 
         account_exists = Account.account_exist("0741421079")

@@ -1,11 +1,11 @@
-import unittest # Importing the unittest module
-from credential import Credential # Importing the account class
+import unittest 
+from credential import Credential 
 
 
 class TestCredential(unittest.TestCase):
     def setUp(self):
        
-        self.new_credentials = Credential("Ahmed","Mukhtar","abc234","mukhtarabdirahman@gmail.com") # create Account object
+        self.new_credentials = Credential("Dorcas","Wanjiku","sh3k1l33","smallwanjiku@gmail.com") 
 
     
     def test_init(self):
@@ -13,17 +13,17 @@ class TestCredential(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_credentials.credentials_name,"Ahmed")
-        self.assertEqual(self.new_credentials.usr_name,"Mukhtar")
-        self.assertEqual(self.new_credentials.password,"abc234")
-        self.assertEqual(self.new_credentials.email,"mukhtarabdirahman@gmail.com")
+        self.assertEqual(self.new_credentials.credentials_name,"Dorcas")
+        self.assertEqual(self.new_credentials.usr_name,"Wanjiku")
+        self.assertEqual(self.new_credentials.password,"sh3k1l33")
+        self.assertEqual(self.new_credentials.email,"smallwanjiku@gmail.com")
 
     def test_save_credentials(self):
         '''
         test_save_account test case to test if the account object is saved into
          the account list
         '''
-        self.new_credentials.save_credentials() # saving the new account
+        self.new_credentials.save_credentials() 
         self.assertEqual(len(Credential.credentials_list),1)  
 
 
@@ -40,7 +40,7 @@ class TestCredential(unittest.TestCase):
             objects to our account_list
             '''
             self.new_credentials.save_credentials()
-            test_credentials = Credential("Test","user","0712345678","test@user.com") # new account
+            test_credentials = Credential("Test","user","0740840333","test@user.com") 
             test_credentials.save_credentials()
             self.assertEqual(len(Credential.credentials_list),2)
 
@@ -50,10 +50,10 @@ class TestCredential(unittest.TestCase):
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_credentials.save_credentials()
-            test_credentials = Credential("Test","user","073456789","test@user.com") # account
+            test_credentials = Credential("Test","user","0740840333","test@user.com")
             test_credentials.save_credentials()
 
-            self.new_credentials.delete_credentials()# Deleting an account object
+            self.new_credentials.delete_credentials()
             self.assertEqual(len(Credential.credentials_list),1) 
 
     def test_find_credentials_by_credentials_name(self):
@@ -62,7 +62,7 @@ class TestCredential(unittest.TestCase):
         '''
 
         self.new_credentials.save_credentials()
-        test_credentials = Credential("Test","user","07456789678","test@user.com") # new account
+        test_credentials = Credential("Test","user","07456789678","test@user.com") 
         test_credentials.save_credentials()
 
         found_credentials = Credential.find_by_name("Test")

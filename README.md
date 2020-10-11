@@ -1,7 +1,7 @@
 PROJECT NAME
 PasswordLocker
 AUTHOR
-Dorcas Wanjiku
+.Dorcas Wanjiku
 
 
 DESCRIPTION

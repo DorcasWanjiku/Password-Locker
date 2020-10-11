@@ -39,8 +39,7 @@ def display_accounts():
     '''
     Function that returns all the saved accounts
     '''
-    return Account.display_accounts()  
- #_________________________________________CREDENTIALS____________________________________________________________________
+    return Account.display_accounts()
 
 
 def create_credentials(credentials_name,usr_name,password,email):
@@ -136,7 +135,7 @@ def main():
                 print("\033[1;32;1m   \n")
                 print(f"You are now logged in to your {account_name} account")
                 print("\033[1;37;1m   \n")
-                #========================================CREDENTIALS AREA=======================================================================
+                
                 while True:
                     print('''
                     Use these short codes:

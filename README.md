@@ -11,6 +11,8 @@ Generate a password for a new credential/account. }
 $ git clone https://github.com/DorcasWanjiku/Password-Locker
 
 $ cd password locker
+## How to Run The App
+{python3 run.py}
 ## Known Bugs
 {For now there no know bugs the application runs well}}
 ## Technologies Used
